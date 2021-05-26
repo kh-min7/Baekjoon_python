@@ -1,0 +1,62 @@
+큐(BFS) - 선입선출(FIFO)
+
+- 맨 뒤에 데이터 삽입
+- 맨 앞 데이터 삭제
+- 맨 앞 데이터 접근
+
+
+from collections import deque
+
+queue = deque()
+
+# 큐 맨 끝에 뒤에 데이터 추가
+queue.append("태호")
+queue.append("영훈")
+queue.append("현승")
+queue.append("지웅")
+
+# 큐 데이터를 출력한다
+print(queue)  # 태호, 영훈, 현승, 지웅
+
+# 큐 마지막 데이터를 삭제한다
+# 보통 큐에서도 마지막 데이터를 삭제하면 해당 메소드가 삭제한 데이터를 리턴한다
+print(queue.popleft())  # 태호
+print(queue.popleft())  # 영훈
+print(queue.popleft())  # 현승
+
+# 큐 데이터를 출력한다
+print(queue)  # 지웅
+
+
+
+
+
+스택(DFS) - 선입후출(LIFO)
+
+- 맨 뒤에 데이터 추가
+- 맨 뒤 데이터 삭제
+- 맨 뒤 데이터 접근
+
+
+from collections import deque
+
+stack = deque()
+
+# 스택 뒤에 정보 추가: "Taeho!"
+stack.append("T")
+stack.append("a")
+stack.append("e")
+stack.append("h")
+stack.append("o")
+
+# 스택 정보를 출력한다
+print(stack)  # T, a, e, h, o
+
+# 스택 마지막 정보를 삭제한다
+# 보통 스택에서 마지막 데이터를 삭제하면 해당 메소드가 삭제한 데이터를 리턴한다
+print(stack.pop())  # o
+print(stack.pop())  # h
+print(stack.pop())  # e
+
+# 스택 정보를 출력한다
+print(stack)  # T, a
