@@ -18,6 +18,3 @@ m, n = map(int, input().split())
 for i in range(m, n + 1):
     if isprime(i):
         print(i)
-
-3, 7
-2, 3, 5
